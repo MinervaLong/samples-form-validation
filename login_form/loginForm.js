@@ -12,30 +12,32 @@ function validate() {
     
     if(email.value == "") {
         email.style.border = "3px solid red";
-        errorEmail.textContent = "Error";
+        errorEmail.textContent = "This field cannot be empty";
         email.focus();
         validation = false;
     }else if (!validateEmail(email.value)) {
         email.style.border = "3px solid red";
-        errorEmail.textContent = "Error";
+        errorEmail.textContent = "This email doesn't have the correct format";
         email.focus();
         validation = false;
     }else {
         email.style.border = "3px solid green";
+        errorEmail.textContent = "Looks good!";
     }
 
     if(password.value == "") { 
         password.style.border = "3px solid red";       
-        errorPass.textContent = "Error";
+        errorPass.textContent = "This field cannot be empty";
         password.focus();
         validation = false;
     }else if (!validatePass(password.value)){
         password.style.border = "3px solid red";
-        errorPass.textContent = "Error";
+        errorPass.textContent = "It should have a capital letter, a number and at least 8 characters long.";
         password.focus();
         validation = false;
     } else {
         password.style.border = "3px solid green";
+        errorPass.textContent = "Looks good!";
     }
 
     return validation;
@@ -71,28 +73,30 @@ password.addEventListener('change', passVerify);
 function emailVerify() {
     if(email.value == "") {
         email.style.border = "3px solid red";
-        errorEmail.textContent = "Error";
+        errorEmail.textContent = "This field cannot be empty";
         email.focus();
     }else if (!validateEmail(email.value)) {
         email.style.border = "3px solid red";
-        errorEmail.textContent = "Error";
+        errorEmail.textContent = "This email doesn't have the correct format";
         email.focus();
     }else {
         email.style.border = "3px solid green";
+        errorEmail.textContent = "Looks good!";
     }
 }
 
 function passVerify() {
     if(password.value == "") {  
         password.style.border = "3px solid red";      
-        errorPass.textContent = "Error";
+        errorPass.textContent = "This field cannot be empty";
         password.focus();
     }else if (!validatePass(password.value)){
         password.style.border = "3px solid red";
-        errorPass.textContent = "Error";
+        errorPass.textContent = "It should have a capital letter, a number and at least 8 characters long.";
         password.focus();
     }
     else {
         password.style.border = "3px solid green";
+        errorPass.textContent = "Looks good!";
     }
 }
