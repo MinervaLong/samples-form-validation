@@ -49,7 +49,11 @@ function validate() {
 		password1.classList.add("is-invalid");
 		document.getElementById("errorPass1").textContent = "Error";
 		errorCounter++;
-	}
+	}else if (!validatePass(password1.value)){
+        password1.classList.add("is-invalid");
+		document.getElementById("errorPass1").textContent = "It should have a capital letter, a number and at least 8 characters long";
+		errorCounter++;
+    }
 
     if (password2.value == "") {
         password2.classList.add("is-invalid");
