@@ -42,10 +42,14 @@ function validate() {
 
 }
 
-
 function validateEmail(email) {
 	let regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	return regex.test(email) ? true : false;
+}
+
+function validatePass(password) {
+    let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return passRegex.test(password) ? true : false;
 }
 
 
