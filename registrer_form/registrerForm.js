@@ -49,7 +49,11 @@ function validate() {
 		password1.classList.add("is-invalid");
 		document.getElementById("errorPass1").textContent = "Error";
 		errorCounter++;
-	}
+	}else if (!validatePass(password1.value)){
+        password1.classList.add("is-invalid");
+		document.getElementById("errorPass1").textContent = "Error";
+		errorCounter++;
+    }
 
     if (password2.value == "") {
         password2.classList.add("is-invalid");
@@ -74,7 +78,10 @@ function validateEmail(email) {
 	return regex.test(email) ? true : false;
 }
 
-
+function validatePass(password) {
+    let passRegex = /^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d).*$/;
+    return passRegex.test(password) ? true : false;
+}
 
 //Event listeners
 
