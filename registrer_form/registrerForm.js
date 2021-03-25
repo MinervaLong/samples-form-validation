@@ -78,7 +78,10 @@ function validateEmail(email) {
 	return regex.test(email) ? true : false;
 }
 
-
+function validatePass(password) {
+    let passRegex = /^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d).*$/;
+    return passRegex.test(password) ? true : false;
+}
 
 //Event listeners
 
