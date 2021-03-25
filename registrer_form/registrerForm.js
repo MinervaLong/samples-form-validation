@@ -19,50 +19,51 @@ function validate() {
     if (userName.value == "") {
         // Change the class of the form to 'is-invalid' so it doesn't allow to send it and show error.
 		userName.classList.add("is-invalid");
-		document.getElementById("errorName").textContent = "Error";
+		document.getElementById("errorName").textContent = "This field cannot be empty";
         errorCounter++;
     }
 
     if (userName.value.length < 3) {
         userName.classList.add("is-invalid");
-        document.getElementById("errorName").textContent = "Error";
+        document.getElementById("errorName").textContent = "This field should have at least 3 characters";
         errorCounter++;
     }
 
     if(email.value == "") {
 		email.classList.add("is-invalid");
-		document.getElementById("errorEmail").textContent = "Error";
+		document.getElementById("errorEmail").textContent = "This field cannot be empty";
         errorCounter++;
     }else if(!validateEmail(email.value)){
 		email.classList.add("is-invalid");
-		document.getElementById("errorEmail").textContent = "Error";
+		document.getElementById("errorEmail").textContent = "This email doesn't have the correct format";
 		errorCounter++;
 	}
 
     if(province.value == "") {
 		province.classList.add("is-invalid");
-		document.getElementById("errorProvince").textContent = "Error";
+		document.getElementById("errorProvince").textContent = "This field cannot be empty";
 		errorCounter++;
 	}
 
     if(password1.value == "") {
 		password1.classList.add("is-invalid");
-		document.getElementById("errorPass1").textContent = "Error";
+		document.getElementById("errorPass1").textContent = "This field cannot be empty";
 		errorCounter++;
 	}else if (!validatePass(password1.value)){
         password1.classList.add("is-invalid");
-		document.getElementById("errorPass1").textContent = "Error";
+		document.getElementById("errorPass1").textContent = "It should have a capital letter, a number and at least 8 characters long.";
 		errorCounter++;
     }
 
     if (password2.value == "") {
         password2.classList.add("is-invalid");
-		document.getElementById("errorPass2").textContent = "Error";
+		document.getElementById("errorPass2").textContent = "This field cannot be empty";
 		errorCounter++;
     }
+
     if (password2.value != password1.value) {
         password2.classList.add("is-invalid");
-		document.getElementById("errorPass2").textContent = "Error";
+		document.getElementById("errorPass2").textContent = "Passwords are not equal";
 		errorCounter++;
     }
 
