@@ -29,7 +29,12 @@ function validate() {
         errorPass.textContent = "Error";
         password.focus();
         validation = false;
-    }else {
+    }else if (!validatePass(password.value)){
+        password.style.border = "3px solid red";
+        errorPass.textContent = "It should have a capital letter, a number and at least 8 characters long.";
+        password.focus();
+        validation = false;
+    } else {
         password.style.border = "3px solid green";
     }
 
