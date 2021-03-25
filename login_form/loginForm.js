@@ -29,7 +29,12 @@ function validate() {
         errorPass.textContent = "Error";
         password.focus();
         validation = false;
-    }else {
+    }else if (!validatePass(password.value)){
+        password.style.border = "3px solid red";
+        errorPass.textContent = "Error";
+        password.focus();
+        validation = false;
+    } else {
         password.style.border = "3px solid green";
     }
 
@@ -37,10 +42,14 @@ function validate() {
 
 }
 
-
 function validateEmail(email) {
 	let regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 	return regex.test(email) ? true : false;
+}
+
+function validatePass(password) {
+    let passRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    return passRegex.test(password) ? true : false;
 }
 
 
@@ -78,7 +87,12 @@ function passVerify() {
         password.style.border = "3px solid red";      
         errorPass.textContent = "Error";
         password.focus();
-    }else {
+    }else if (!validatePass(password.value)){
+        password.style.border = "3px solid red";
+        errorPass.textContent = "Error";
+        password.focus();
+    }
+    else {
         password.style.border = "3px solid green";
     }
 }
