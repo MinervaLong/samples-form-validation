@@ -1,0 +1,70 @@
+/* RESET VALUES*/
+
+* {
+    margin: unset;
+    box-sizing:unset;
+    padding: unset;
+    font-size: unset;
+    color: unset;
+    text-decoration: unset;
+}
+
+body{
+    font-family: Arial;
+    background-color: #D5DED9;
+}
+
+* {
+    box-sizing: border-box;
+}
+  
+.title {
+    text-align: center;
+    margin:3% 0 3% 0;
+    color:#7A6A53;
+    font-weight: 700;
+}
+
+.container {
+    margin-top: 16%;
+}
+
+.styleForm {
+    margin:auto!important;
+    max-width:300px !important;
+}
+  
+form.styleForm input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+  
+form.styleForm button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #7A6A53;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+  
+form.styleForm button:hover {
+    background: #948C75;
+}
+  
+form.styleForm::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+
