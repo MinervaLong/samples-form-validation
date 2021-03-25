@@ -16,7 +16,7 @@ function validate () {
         validation = false;
     }else if(searchInput.value.length <= 3) {
         searchInput.style.border = "1px solid red";
-        errorSearch.textContent = "At least 3 characters";
+        errorSearch.textContent = "More than 3 characters";
         searchInput.focus();
         validation = false;
     }else {
