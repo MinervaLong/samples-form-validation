@@ -31,7 +31,7 @@ function validate() {
         validation = false;
     }else if (!validatePass(password.value)){
         password.style.border = "3px solid red";
-        errorPass.textContent = "It should have a capital letter, a number and at least 8 characters long.";
+        errorPass.textContent = "Error";
         password.focus();
         validation = false;
     } else {
@@ -87,7 +87,12 @@ function passVerify() {
         password.style.border = "3px solid red";      
         errorPass.textContent = "Error";
         password.focus();
-    }else {
+    }else if (!validatePass(password.value)){
+        password.style.border = "3px solid red";
+        errorPass.textContent = "Error";
+        password.focus();
+    }
+    else {
         password.style.border = "3px solid green";
     }
 }
