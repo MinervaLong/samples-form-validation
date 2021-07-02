@@ -1,0 +1,30 @@
+body {
+    background-color: #2E303F;
+}
+
+h1 {
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+.btn-primary {
+    background-color: #414B64;
+    border-color: #414B64;
+}
+
+
+.btn-primary:hover {
+    background-color: #42505D;
+    border-color: #42505D;
+}
+
+.btn-primary:active {
+    background-color: #414B64;
+    border-color: #414B64;
+}
+
+.formBG {
+    background-color: #BCE0D6;
+    padding:3rem;
+    border-radius: 5px;
+}
